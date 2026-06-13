@@ -1,7 +1,7 @@
 
 export default function HeroHome() {
   return (
-    <section>
+    <section id="home">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
         <div className="py-12 md:py-20">

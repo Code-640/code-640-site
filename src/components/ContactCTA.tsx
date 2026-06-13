@@ -2,7 +2,7 @@ import BlurredShape from "./../assets/blurred-shape.svg";
 
 export default function Cta() {
   return (
-    <section className="relative overflow-hidden">
+    <section id="contact" className="relative overflow-hidden">
       <div
         className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -mb-24 ml-20 -translate-x-1/2"
         aria-hidden="true"
@@ -35,7 +35,7 @@ export default function Cta() {
               <div data-aos="fade-up" data-aos-delay={400}>
                 <a
                   className="btn group mb-4 w-full bg-linear-to-t from-brand-600 to-brand-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                  href="#0"
+                  href="mailto:hello@code640.com"
                 >
                   Contact Us
                 </a>

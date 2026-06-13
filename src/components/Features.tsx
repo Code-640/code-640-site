@@ -38,7 +38,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="relative">
+    <section id="services" className="relative">
       <div
         className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
         aria-hidden="true"
@@ -78,19 +78,10 @@ export default function Features() {
               We combine insight, design, and technology to create digital experiences that connect, inspire, and deliver measurable impact.
             </p>
           </div>
-          <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
-            <img
-              className="max-w-none"
-              src=""
-              width={1104}
-              height={384}
-              alt="Features"
-            />
-          </div>
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">
             {items.map((item) => (
-              <article>
+              <article key={item.title}>
                 {item.icon}
                 <h3 className="mb-1 font-army tracking-wider text-[1rem] font-semibold text-gray-200 lowercase">
                   {item.title}
