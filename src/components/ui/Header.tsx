@@ -12,6 +12,43 @@ const Header = () => {
     { label: 'Contact', href: '#contact' },
   ]
 
+  const scrollToSection = (href: string) => {
+    const target = document.querySelector(href)
+
+    if (!target) return
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const headerOffset = 28
+    const startY = window.scrollY
+    const targetY = target.getBoundingClientRect().top + window.scrollY - headerOffset
+    const distance = targetY - startY
+    const duration = prefersReducedMotion ? 0 : 850
+    const startTime = performance.now()
+
+    const easeInOutCubic = (progress: number) =>
+      progress < 0.5 ? 4 * progress ** 3 : 1 - Math.pow(-2 * progress + 2, 3) / 2
+
+    const step = (currentTime: number) => {
+      const elapsed = currentTime - startTime
+      const progress = duration === 0 ? 1 : Math.min(elapsed / duration, 1)
+
+      window.scrollTo(0, startY + distance * easeInOutCubic(progress))
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step)
+      }
+    }
+
+    window.requestAnimationFrame(step)
+  }
+
+  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    event.preventDefault()
+    setMenuOpen(false)
+    scrollToSection(href)
+    window.history.pushState(null, '', href)
+  }
+
   return (
     <header className="relative z-30 mt-2 w-full md:mt-5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -27,7 +64,8 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-300 transition hover:text-emerald-400"
+                onClick={(event) => handleNavClick(event, item.href)}
+                className="text-gray-300 transition hover:text-brand-300"
               >
                 {item.label}
               </a>
@@ -38,7 +76,7 @@ const Header = () => {
           <div className="flex justify-end md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-gray-300 transition hover:bg-gray-800 hover:text-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-gray-300 transition hover:bg-gray-800 hover:text-brand-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
               aria-label="Toggle navigation"
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
@@ -58,8 +96,8 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className="block rounded-lg px-3 py-3 text-sm font-medium text-gray-200 transition hover:bg-gray-900 hover:text-emerald-400"
+                onClick={(event) => handleNavClick(event, item.href)}
+                className="block rounded-lg px-3 py-3 text-sm font-medium text-gray-200 transition hover:bg-gray-900 hover:text-brand-300"
               >
                 {item.label}
               </a>
