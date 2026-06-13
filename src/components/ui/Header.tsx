@@ -8,6 +8,7 @@ const Header = () => {
     { label: 'Hero', href: '#home' },
     { label: 'Who We Are', href: '#about' },
     { label: 'What We Do', href: '#services' },
+    { label: 'Work', href: '#work' },
     { label: 'Contact', href: '#contact' },
   ]
 

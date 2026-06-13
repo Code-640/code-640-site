@@ -10,6 +10,7 @@ import HeroHome from './components/HeroHome'
 import PageIllustrations from './components/PageIllustrations';
 import Workflows from './components/Workflows';
 import Features from './components/Features';
+import FeaturedWork from './components/FeaturedWork';
 
 const App = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const App = () => {
         <HeroHome />
         <Workflows />
         <Features />
+        <FeaturedWork />
         <ContactCTA />
       </main>
       <Footer />

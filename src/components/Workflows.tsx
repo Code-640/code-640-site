@@ -3,18 +3,19 @@ import Spotlight from "./Spotlight";
 export default function Workflows() {
   const cards = [
     {
-      title: 'Creativity Without Limits',
-      description: 'We push boundaries to craft bold, memorable work that sets your brand apart.',
+      title: 'Product thinking',
+      description: 'We shape ideas around business goals, user experience, and the technical path needed to launch with confidence.',
     },
     {
-      title: 'Strategic Excellence',
-      description: 'Every decision is guided by insight — turning your goals and audience needs into purposeful, high-impact solutions.',
+      title: 'Senior execution',
+      description: 'We combine design taste, clean architecture, and practical delivery so every interface feels polished and every system stays maintainable.',
     },
     {
-      title: 'Client Collaboration',
-      description: 'Your vision leads the way. We work side by side to transform ideas into results that truly matter.',
+      title: 'Long-term partnership',
+      description: 'We work close to your team before, during, and after launch, evolving the product as the business grows.',
     },
   ];
+
   return (
     <section id="about">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -27,12 +28,13 @@ export default function Workflows() {
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 text-3xl font-semibold text-transparent md:text-4xl font-army tracking-wider lowercase">
-              Driven by insight. Powered by creativity.
+              a focused studio for ambitious digital products.
             </h2>
             <p className="text-lg text-brand-200/65">
-              We craft solutions that connect, engage and deliver real impact.
+              Code 640 partners with founders and companies that need more than a website. We build digital experiences with strategy, design precision, and full-stack engineering working as one.
             </p>
           </div>
+
           {/* Spotlight items */}
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
             {cards.map((card) => (
@@ -41,7 +43,6 @@ export default function Workflows() {
                 className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-brand-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-brand-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
               >
                 <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-linear-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
-                  {/* Arrow */}
                   <div
                     className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-0 transition-opacity group-hover/card:opacity-100"
                     aria-hidden="true"
@@ -58,7 +59,6 @@ export default function Workflows() {
                       />
                     </svg>
                   </div>
-                  {/* Content */}
                   <div className="p-6">
                     <div className="mb-3">
                       <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">

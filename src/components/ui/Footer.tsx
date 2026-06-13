@@ -5,6 +5,7 @@ const navLinks = [
   { label: 'Hero banner', href: '#home' },
   { label: 'Who We Are', href: '#about' },
   { label: 'What We Do', href: '#services' },
+  { label: 'Featured Work', href: '#work' },
   { label: 'Contact', href: '#contact' },
 ];
 
