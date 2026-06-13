@@ -16,10 +16,10 @@ export default function FeaturedWork() {
                 Featured Work
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 text-3xl font-semibold text-transparent md:text-4xl font-army tracking-wider lowercase">
-              proof that strategy and execution can move fast together.
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-brand-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold uppercase tracking-[0.08em] text-transparent md:text-4xl">
+              Proof that strategy and execution can move fast together.
             </h2>
-            <p className="text-lg text-brand-200/65">
+            <p className="text-lg text-brand-100/75">
               Some of our best tools come from real delivery problems. Clamp started as an internal product to organize reusable values, keep client work separated, and speed up recurring decisions across projects.
             </p>
           </div>
@@ -66,16 +66,18 @@ export default function FeaturedWork() {
               <h3 className="mb-4 text-2xl font-semibold text-gray-100 md:text-3xl">
                 Clamp
               </h3>
-              <p className="mb-6 text-brand-200/75">
+              <p className="mb-6 text-brand-100/80">
                 A product built by Code 640 to bring more structure to multi-client delivery. Clamp helps manage fluid font-size values across different projects, turning recurring calculations into reusable decisions that speed up implementation.
               </p>
               <ul className="mb-8 flex flex-wrap gap-2 text-sm">
                 {highlights.map((item) => (
                   <li
                     key={item}
-                    className="inline-flex rounded-full border border-gray-800 bg-gray-900/40 px-3 py-1 text-gray-300"
+                    className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
                   >
-                    {item}
+                    <span className="font-army tracking-wider text-gray-100 lowercase">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>

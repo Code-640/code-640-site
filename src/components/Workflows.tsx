@@ -5,32 +5,35 @@ export default function Workflows() {
     {
       title: 'Product thinking',
       description: 'We shape ideas around business goals, user experience, and the technical path needed to launch with confidence.',
+      arrowClass: 'rotate-0',
     },
     {
       title: 'Senior execution',
       description: 'We combine design taste, clean architecture, and practical delivery so every interface feels polished and every system stays maintainable.',
+      arrowClass: 'rotate-0',
     },
     {
       title: 'Long-term partnership',
       description: 'We work close to your team before, during, and after launch, evolving the product as the business grows.',
+      arrowClass: '-rotate-45',
     },
   ];
 
   return (
     <section id="about">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="pb-12 md:pb-20">
+        <div className="pb-14 md:pb-20">
           {/* Section header */}
-          <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
+          <div className="mx-auto max-w-3xl pb-10 text-center md:pb-14">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-brand-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-brand-200/50">
               <span className="inline-flex bg-linear-to-r from-brand-500 to-brand-200 bg-clip-text text-transparent">
                 Who We Are
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 text-3xl font-semibold text-transparent md:text-4xl font-army tracking-wider lowercase">
-              a focused studio for ambitious digital products.
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold uppercase tracking-[0.08em] text-transparent md:text-4xl">
+              A focused studio for ambitious digital products.
             </h2>
-            <p className="text-lg text-brand-200/65">
+            <p className="text-lg text-brand-100/75">
               Code 640 partners with founders and companies that need more than a website. We build digital experiences with strategy, design precision, and full-stack engineering working as one.
             </p>
           </div>
@@ -40,7 +43,7 @@ export default function Workflows() {
             {cards.map((card) => (
               <div
                 key={card.title}
-                className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-brand-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-brand-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
+                className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800/80 p-px shadow-lg shadow-black/10 before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-brand-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-brand-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
               >
                 <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-linear-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
                   <div
@@ -48,6 +51,7 @@ export default function Workflows() {
                     aria-hidden="true"
                   >
                     <svg
+                      className={`transition-transform duration-300 ${card.arrowClass}`}
                       xmlns="http://www.w3.org/2000/svg"
                       width={9}
                       height={8}
@@ -62,12 +66,12 @@ export default function Workflows() {
                   <div className="p-6">
                     <div className="mb-3">
                       <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
-                        <span className="bg-linear-to-r from-brand-500 to-brand-200 bg-clip-text text-transparent font-army tracking-wider lowercase">
+                        <span className="font-army tracking-wider text-gray-100 lowercase">
                           {card.title}
                         </span>
                       </span>
                     </div>
-                    <p className="text-brand-200/65">
+                    <p className="text-brand-100/75">
                       {card.description}
                     </p>
                   </div>

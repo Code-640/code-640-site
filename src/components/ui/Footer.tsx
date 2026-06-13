@@ -34,7 +34,7 @@ export default function Footer() {
             <a href="#home" aria-label="Code 640 home">
               <img src={logo} className="app-logo" alt="Code 640" width={200} />
             </a>
-            <p className="mt-4 max-w-md text-sm text-brand-200/65">
+            <p className="mt-4 max-w-md text-sm text-brand-100/75">
               Full-stack development studio building sharp, fast, and scalable digital products.
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function Footer() {
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
-                    className="text-brand-200/65 transition hover:text-brand-500"
+                    className="text-brand-100/75 transition hover:text-brand-500"
                     href={link.href}
                   >
                     {link.label}
@@ -61,7 +61,7 @@ export default function Footer() {
               {projectLinks.map((link) => (
                 <li key={link.href}>
                   <a
-                    className="text-brand-200/65 transition hover:text-brand-500"
+                    className="text-brand-100/75 transition hover:text-brand-500"
                     href={link.href}
                     rel="noreferrer"
                     target="_blank"
@@ -73,7 +73,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <p className="pb-5 text-center text-sm text-gray-500">
+        <p className="pb-5 text-center text-sm text-gray-400">
           &copy; {new Date().getFullYear()} Code 640. All rights reserved.
         </p>
       </div>
