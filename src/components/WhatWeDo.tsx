@@ -89,7 +89,7 @@ export default function Features() {
                 What We Do
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-bold uppercase tracking-[0.08em] text-transparent md:text-4xl">
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle font-bold uppercase tracking-[0.08em] text-transparent text-[clamp(1.75rem,1.2143rem_+_1.4286vw,2.5rem)] leading-[1.35]">
               Digital services built for launch, scale, and impact.
             </h2>
             <p className="text-lg text-brand-100/75">

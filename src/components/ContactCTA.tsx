@@ -27,7 +27,7 @@ export default function Cta() {
               </span>
             </div>
             <h2
-              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-6 font-nacelle text-3xl font-semibold uppercase tracking-[0.08em] text-transparent md:text-5xl"
+              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-6 font-nacelle font-bold uppercase tracking-[0.08em] text-transparent text-[clamp(1.75rem,0.5rem_+_3.3333vw,3.5rem)] leading-[1.1]"
               data-aos="fade-up"
             >
               Ready to build something sharp?
