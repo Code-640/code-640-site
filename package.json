@@ -1,7 +1,7 @@
 {
   "name": "code-640.github.io",
   "version": "0.1.0",
-  "homepage": "https://code-640.github.io/",
+  "homepage": "https://code640.com/",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
