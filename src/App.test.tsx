@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Code 640 home page', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Explore More/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /premium engineering/i })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /Start a project/i })).toBeInTheDocument();
 });
