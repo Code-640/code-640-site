@@ -4,7 +4,7 @@ export default function HeroHome() {
     <section id="home">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
-        <div className="py-16 md:py-24">
+        <div className="py-16 md:pt-24 md:pb-16">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-20">
             <div
