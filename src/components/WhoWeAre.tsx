@@ -30,7 +30,7 @@ export default function Workflows() {
                 Who We Are
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold uppercase tracking-[0.08em] text-transparent md:text-4xl">
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-bold uppercase tracking-[0.08em] text-transparent md:text-4xl">
               A focused studio for ambitious digital products.
             </h2>
             <p className="text-lg text-brand-100/75">
@@ -66,7 +66,7 @@ export default function Workflows() {
                   <div className="p-6">
                     <div className="mb-3">
                       <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
-                        <span className="font-army tracking-wider text-gray-100 lowercase">
+                        <span className="font-army tracking-[0.10em] text-gray-100 lowercase">
                           {card.title}
                         </span>
                       </span>

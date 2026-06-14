@@ -24,6 +24,18 @@ export default defineConfig({
                 800: 'var(--color-brand-800)',
                 900: 'var(--color-brand-900)',
               },
+              signal: {
+                100: 'var(--color-signal-100)',
+                200: 'var(--color-signal-200)',
+                300: 'var(--color-signal-300)',
+                400: 'var(--color-signal-400)',
+                500: 'var(--color-signal-500)',
+              },
+              violet: {
+                300: 'var(--color-violet-300)',
+                400: 'var(--color-violet-400)',
+                500: 'var(--color-violet-500)',
+              },
             },
           },
         },

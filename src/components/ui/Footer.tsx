@@ -1,3 +1,4 @@
+import logoMark from '../../logo-ico.svg';
 import logo from '../../logo.svg';
 import FooterIllustration from "./../../assets/footer-illustration.svg";
 
@@ -31,8 +32,16 @@ export default function Footer() {
         </div>
         <div className="grid gap-10 border-t py-10 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:grid-cols-[1.3fr_1fr_1fr] md:py-14">
           <div>
-            <a href="#home" aria-label="Code 640 home">
-              <img src={logo} className="app-logo" alt="Code 640" width={200} />
+            <a href="#home" className="inline-flex items-center gap-3" aria-label="Code 640 home">
+              <img
+                src={logoMark}
+                className="app-logo h-8 w-8 shrink-0"
+                alt=""
+                width={36}
+                height={36}
+                aria-hidden="true"
+              />
+              <img src={logo} className="app-logo" alt="Code 640" width={150} />
             </a>
             <p className="mt-4 max-w-md text-sm text-brand-100/75">
               Full-stack development studio building sharp, fast, and scalable digital products.
@@ -40,8 +49,8 @@ export default function Footer() {
           </div>
 
           <div className="space-y-3">
-            <h3 className="text-sm font-medium text-gray-200">Landing page</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-sm font-medium text-gray-200">Navigation</h3>
+            <ul className="space-y-2 text-sm columns-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a

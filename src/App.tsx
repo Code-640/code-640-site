@@ -8,8 +8,8 @@ import Footer from './components/ui/Footer'
 import ContactCTA from './components/ContactCTA'
 import HeroHome from './components/HeroHome'
 import PageIllustrations from './components/PageIllustrations';
-import Workflows from './components/Workflows';
-import Features from './components/Features';
+import WhoWeAre from './components/WhoWeAre';
+import WhatWeDo from './components/WhatWeDo';
 import FeaturedWork from './components/FeaturedWork';
 
 const App = () => {
@@ -28,8 +28,8 @@ const App = () => {
       <main className="relative isolate flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
         <PageIllustrations multiple={true}/>
         <HeroHome />
-        <Workflows />
-        <Features />
+        <WhoWeAre />
+        <WhatWeDo />
         <FeaturedWork />
         <ContactCTA />
       </main>

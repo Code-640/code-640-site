@@ -5,7 +5,7 @@ import logo from '../../logo-ico.svg';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const navItems = [
-    { label: 'Hero', href: '#home' },
+    { label: 'Home', href: '#home' },
     { label: 'Who We Are', href: '#about' },
     { label: 'What We Do', href: '#services' },
     { label: 'Work', href: '#work' },
@@ -55,7 +55,7 @@ const Header = () => {
         <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-gray-900/90 px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-xs">
           {/* Logo */}
           <div className="text-2xl font-semibold tracking-tight text-white">
-            <img src={logo} className="app-logo" alt="logo" width={38} />
+            <img src={logo} className="app-logo" alt="Code 640" width={38} height={38} />
           </div>
 
           {/* Desktop Nav */}
