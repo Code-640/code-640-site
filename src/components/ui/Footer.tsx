@@ -3,7 +3,7 @@ import logo from '../../logo.svg';
 import FooterIllustration from "./../../assets/footer-illustration.svg";
 
 const navLinks = [
-  { label: 'Hero banner', href: '#home' },
+  { label: 'Home', href: '#home' },
   { label: 'Who We Are', href: '#about' },
   { label: 'What We Do', href: '#services' },
   { label: 'Featured Work', href: '#work' },
@@ -54,7 +54,7 @@ export default function Footer() {
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
-                    className="text-brand-100/75 transition hover:text-brand-500"
+                    className="text-brand-100/75 transition hover:text-brand-300"
                     href={link.href}
                   >
                     {link.label}

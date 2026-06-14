@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import logo from '../../logo-ico.svg';
 
@@ -12,41 +12,8 @@ const Header = () => {
     { label: 'Contact', href: '#contact' },
   ]
 
-  const scrollToSection = (href: string) => {
-    const target = document.querySelector(href)
-
-    if (!target) return
-
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const headerOffset = 28
-    const startY = window.scrollY
-    const targetY = target.getBoundingClientRect().top + window.scrollY - headerOffset
-    const distance = targetY - startY
-    const duration = prefersReducedMotion ? 0 : 850
-    const startTime = performance.now()
-
-    const easeInOutCubic = (progress: number) =>
-      progress < 0.5 ? 4 * progress ** 3 : 1 - Math.pow(-2 * progress + 2, 3) / 2
-
-    const step = (currentTime: number) => {
-      const elapsed = currentTime - startTime
-      const progress = duration === 0 ? 1 : Math.min(elapsed / duration, 1)
-
-      window.scrollTo(0, startY + distance * easeInOutCubic(progress))
-
-      if (progress < 1) {
-        window.requestAnimationFrame(step)
-      }
-    }
-
-    window.requestAnimationFrame(step)
-  }
-
-  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    event.preventDefault()
+  const handleNavClick = () => {
     setMenuOpen(false)
-    scrollToSection(href)
-    window.history.pushState(null, '', href)
   }
 
   return (
@@ -64,7 +31,7 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                onClick={(event) => handleNavClick(event, item.href)}
+                onClick={handleNavClick}
                 className="text-gray-300 transition hover:text-brand-300"
               >
                 {item.label}
@@ -96,7 +63,7 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                onClick={(event) => handleNavClick(event, item.href)}
+                onClick={handleNavClick}
                 className="block rounded-lg px-3 py-3 text-sm font-medium text-gray-200 transition hover:bg-gray-900 hover:text-brand-300"
               >
                 {item.label}

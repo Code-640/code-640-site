@@ -87,7 +87,7 @@ export default function FeaturedWork() {
                 rel="noreferrer"
                 target="_blank"
               >
-                View project
+                Use Clamp
               </a>
             </div>
           </article>

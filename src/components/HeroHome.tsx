@@ -14,14 +14,14 @@ export default function HeroHome() {
               Code 640 - full-stack development studio
             </div>
             <h1
-              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-6xl"
+              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-brand-200),var(--color-gray-50),var(--color-brand-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-bold uppercase tracking-[0.01em] text-transparent md:text-6xl"
               data-aos="fade-up"
             >
               We build digital products with premium engineering.
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 text-lg text-brand-200/70 md:text-xl"
+                className="mb-8 text-lg text-brand-50 md:text-xl"
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
