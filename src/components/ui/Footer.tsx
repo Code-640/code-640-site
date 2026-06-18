@@ -12,6 +12,7 @@ const navLinks = [
 
 const projectLinks = [
   { label: 'Clamp', href: 'https://clamp.code640.com' },
+  { label: 'Favicon Studio', href: 'https://favicon.code640.com' },
 ];
 
 export default function Footer() {

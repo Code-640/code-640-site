@@ -1,9 +1,15 @@
 export default function FeaturedWork() {
   const clampLogoUrl = 'https://clamp.code640.com/favicon.svg';
-  const highlights = [
+  const faviconLogoUrl = 'https://favicon.code640.com/favicon.svg';
+  const clampHighlights = [
     'Internal product',
     'Reusable values',
     'Client-ready workflow',
+  ];
+  const faviconHighlights = [
+    'Internal product',
+    'Privacy-first',
+    'Production-ready output',
   ];
 
   return (
@@ -20,10 +26,11 @@ export default function FeaturedWork() {
               Proof that strategy and execution can move fast together.
             </h2>
             <p className="text-lg text-brand-100/75">
-              Some of our best tools come from real delivery problems. Clamp started as an internal product to organize reusable values, keep client work separated, and speed up recurring decisions across projects.
+              Some of our best tools come from real delivery problems. We build focused products that simplify recurring work, protect the workflow, and turn repeated decisions into reliable systems.
             </p>
           </div>
 
+          <div className="space-y-8">
           <article className="grid overflow-hidden rounded-2xl border border-gray-800 bg-gray-950/80 md:grid-cols-[1fr_1.1fr]">
             <div className="relative min-h-64 overflow-hidden bg-[#050816] p-6 md:min-h-96">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_18%,rgba(0,229,255,.24),transparent_32%),radial-gradient(circle_at_82%_18%,rgba(255,61,129,.2),transparent_30%),linear-gradient(135deg,#050816,#0c0b18_48%,#171027)]" />
@@ -43,7 +50,7 @@ export default function FeaturedWork() {
                         Clamp
                       </p>
                       <p className="text-sm font-medium text-cyan-200/80">
-                        Fluid typography generator
+                        Fluid typography workbench
                       </p>
                     </div>
                   </div>
@@ -70,7 +77,7 @@ export default function FeaturedWork() {
                 A product built by Code 640 to bring more structure to multi-client delivery. Clamp helps manage fluid font-size values across different projects, turning recurring calculations into reusable decisions that speed up implementation.
               </p>
               <ul className="mb-8 flex flex-wrap gap-2 text-sm">
-                {highlights.map((item) => (
+                {clampHighlights.map((item) => (
                   <li
                     key={item}
                     className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
@@ -91,6 +98,75 @@ export default function FeaturedWork() {
               </a>
             </div>
           </article>
+
+          <article className="grid overflow-hidden rounded-2xl border border-gray-800 bg-gray-950/80 md:grid-cols-[1.1fr_1fr]">
+            <div className="p-6 md:p-8 lg:p-10">
+              <p className="mb-4 inline-flex rounded-full border border-brand-500/25 bg-brand-500/10 px-3 py-1 text-sm font-medium text-brand-200">
+                Case study
+              </p>
+              <h3 className="mb-4 text-2xl font-army tracking-[0.08em] font-semibold text-gray-100 md:text-3xl">
+                favicon studio
+              </h3>
+              <p className="mb-6 text-brand-100/80">
+                Favicon Studio was built to deliver complete, production-ready favicon packages without sending source files beyond your browser. Everything is processed locally, keeping your files private and the workflow fully under your control.
+              </p>
+              <ul className="mb-8 flex flex-wrap gap-2 text-sm">
+                {faviconHighlights.map((item) => (
+                  <li
+                    key={item}
+                    className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
+                  >
+                    <span className="font-army tracking-[0.10em] text-gray-100 lowercase">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                className="btn border border-gray-700 bg-gray-900/70 text-gray-200 hover:border-brand-500/60 hover:text-brand-200"
+                href="https://favicon.code640.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Use Favicon Studio
+              </a>
+            </div>
+
+            <div className="relative min-h-64 overflow-hidden bg-[#080b10] p-6 md:min-h-96">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(163,255,18,.18),transparent_34%),radial-gradient(circle_at_84%_16%,rgba(100,201,0,.12),transparent_30%),linear-gradient(135deg,#080b10,#0b1110_48%,#10170d)]" />
+              <div className="absolute inset-x-8 bottom-24 h-1 rotate-[-8deg] rounded-full bg-[linear-gradient(90deg,#A3FF12,#64C900,#2C5414)] opacity-80 blur-sm" />
+              <div className="relative flex h-full flex-col justify-between rounded-xl border border-[#263124] bg-[#090d0b]/85 p-6 shadow-2xl shadow-black/30">
+                <div className="space-y-7">
+                  <div className="flex items-center gap-4">
+                    <img
+                      className="h-14 w-14 rounded-2xl shadow-[0_0_28px_rgba(163,255,18,.2)]"
+                      src={faviconLogoUrl}
+                      width={64}
+                      height={64}
+                      alt="Favicon Studio logo"
+                    />
+                    <div>
+                      <p className="text-2xl font-semibold tracking-tight text-slate-50">
+                        Favicon Studio
+                      </p>
+                      <p className="text-sm font-medium text-brand-200/80">
+                        Privacy-first favicon generator
+                      </p>
+                    </div>
+                  </div>
+                  <div className="max-w-lg">
+                    <p className="pb-2 text-lg font-medium leading-relaxed text-brand-50/85">
+                      Generate complete favicon packages, app icons, manifests, and ready-to-use HTML tags directly in your browser.
+                    </p>
+                  </div>
+                </div>
+                <div className="rounded-lg border border-brand-300/25 bg-brand-300/10 px-3 py-2 font-mono text-sm font-semibold text-brand-200">
+                  favicon.ico · PNG · apple-touch-icon · manifest
+                </div>
+              </div>
+            </div>
+          </article>
+          </div>
         </div>
       </div>
     </section>
